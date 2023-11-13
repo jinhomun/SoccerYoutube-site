@@ -1,0 +1,19 @@
+#today {}
+
+.today__inner {
+    display: flex;
+    background-color: var(--black300);
+
+    .today__thubm {
+        width: 40%;
+        background-image: url(https://i.ytimg.com/vi/xtSHYJtuzok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnkDFd4HQIKKuz6B2F99jjugbSEQ);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .today__text {
+        width: 60%;
+        height: 310px;
+    }
+}
