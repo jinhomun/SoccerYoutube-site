@@ -105,7 +105,6 @@
         padding: 20px 10px 10px 10px;
 
         li {
-            margin-bottom: 10px;
             display: block;
             border-bottom: 1px solid #fff;
 
@@ -122,6 +121,13 @@
             }
 
             &:hover {
+                background-color: #eee;
+                color: var(--black);
+
+            }
+
+            &.active {
+
                 background-color: #eee;
                 color: var(--black);
 

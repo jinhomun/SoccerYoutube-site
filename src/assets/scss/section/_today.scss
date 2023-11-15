@@ -2,18 +2,58 @@
 
 .today__inner {
     display: flex;
-    background-color: var(--black300);
+    // background-color: var(--black300);
+    border: 1px solid var(--white);
+    margin-bottom: 50px;
 
     .today__thubm {
         width: 40%;
-        background-image: url(https://i.ytimg.com/vi/xtSHYJtuzok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnkDFd4HQIKKuz6B2F99jjugbSEQ);
+        // background-image: url(https://i.ytimg.com/vi/xtSHYJtuzok/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnkDFd4HQIKKuz6B2F99jjugbSEQ);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
     .today__text {
+
         width: 60%;
         height: 310px;
+        padding: 2rem;
+        position: relative;
+
+        .today {
+            display: inline-block;
+            padding: 1px 30px;
+            border-radius: 40px;
+            border: 1px solid var(--white);
+            background-color: #000;
+        }
+
+        .title {
+            line-height: 2;
+            font-size: 1.5rem;
+        }
+
+        .desc {
+            color: var(--white)
+        }
+
+        .info {
+            position: absolute;
+            left: 2rem;
+            bottom: 2rem;
+
+            .autor {
+                border: 1px solid var(--white);
+                background-color: #000;
+                color: var(--white);
+                padding: 3px 15px;
+            }
+
+            .date {
+                color: var(--white);
+            }
+        }
     }
+
 }

@@ -7,9 +7,10 @@
         margin-bottom: 50px;
         border: 1px solid #fff;
         padding: 16px;
+
         .video__thumb {
 
-            a{
+            a {
                 display: block;
                 cursor: pointer;
                 width: 100%;
@@ -27,30 +28,33 @@
                 @include line-one;
                 color: #000;
             }
+
             .desc {
                 width: 100%;
                 @include line(3);
                 color: #fff;
                 margin-bottom: 10px;
             }
+
             .info {
                 display: flex;
                 justify-content: space-between;
                 color: #fff;
 
-                .author{
+                .autor {
                     color: #000;
                     font-size: 14px;
                     text-decoration: underline;
                     text-underline-position: under;
 
                     &:hover {
-                        color:white;
+                        color: white;
                     }
                 }
+
                 .date {
                     white-space: nowrap;
-                    color:#000;
+                    color: #000;
                     font-size: 14px;
                 }
             }
@@ -58,17 +62,19 @@
         }
     }
 }
+
 // 비이오 상세 페이지
 .video__view {
-   
+
     .video__play {
         width: 100%;
         padding-bottom: 56.25%;
         position: relative;
     }
+
     .video__info {
 
-        .video__title{
+        .video__title {
             padding-top: 20px;
             margin-bottom: 20px;
             font-size: 30px;
@@ -76,26 +82,28 @@
             padding-bottom: 15px;
 
         }
+
         .video__channel {
             display: flex;
             justify-content: space-between;
             margin-bottom: 40px;
             margin-top: 40px;
 
-            .id{
-                
-                a{
+            .id {
+
+                a {
                     border: 1px solid var(--black300);
                     padding: 7px 20px;
                     border-radius: 30px;
                 }
             }
-            .count{
+
+            .count {
                 span {
                     padding: 7px 20px;
                     border-radius: 30px;
                     margin-left: 5px;
-                    background-color:var(--black);
+                    background-color: var(--black);
                     color: var(--white);
 
                     svg {
@@ -112,9 +120,10 @@
 
     .video__desc {
         border-top: 1px solid var(--black600);
-        white-space:pre-line;
+        white-space: pre-line;
         padding-top: 40px;
     }
+
     .video__comments {
         border: 2px solid rgba(255, 255, 255, 0.5);
 
@@ -128,9 +137,7 @@
             }
         }
     }
-    
-    
+
+
 
 }
-
-
