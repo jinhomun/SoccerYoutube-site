@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
+    min-height: 100vh;
 
     .video {
         margin-bottom: 50px;
@@ -36,27 +37,15 @@
                 margin-bottom: 10px;
             }
 
+
             .info {
                 display: flex;
                 justify-content: space-between;
-                color: #fff;
-
-                .autor {
-                    color: #000;
-                    font-size: 14px;
-                    text-decoration: underline;
-                    text-underline-position: under;
-
-                    &:hover {
-                        color: white;
-                    }
-                }
-
-                .date {
-                    white-space: nowrap;
-                    color: #000;
-                    font-size: 14px;
-                }
+                color: #000;
+                font-size: 14px;
+                text-decoration: underline;
+                text-underline-position: under;
+                font-weight: 600;
             }
 
         }
@@ -91,10 +80,12 @@
 
             .id {
 
+
                 a {
-                    border: 1px solid var(--black300);
+                    border: 2px solid var(--black);
                     padding: 7px 20px;
                     border-radius: 30px;
+                    background-color: #000;
                 }
             }
 

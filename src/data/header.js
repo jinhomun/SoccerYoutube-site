@@ -61,8 +61,8 @@ export const keywordText = [
         src: "/search/JK 아트사커 온라인"
     },
     {
-        title: "SPOiler 스포일러",
-        src: "/search/SPOiler 스포일러"
+        title: "축구 읽어주는 여자 쵱내",
+        src: "/search/축구 읽어주는 여자 쵱내"
     },
     {
         title: "K LEAGUE",

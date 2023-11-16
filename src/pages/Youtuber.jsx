@@ -5,7 +5,7 @@ import { youtuberText } from '../data/youtuber'
 const youtuber = () => {
     return (
         <section className="youtuber">
-            <h2>😀축구 유튜버 모음</h2>
+            <h2>⚽축구 유튜버 모음⚽</h2>
             <div className="youtuber__inner">
                 {youtuberText.map((youtuber, key) => (
                     <div className="youtuber play__icon" key={key}>

@@ -54,10 +54,10 @@ export const youtuberText = [
         channelAddress: "https://www.youtube.com/@JKartsoccer",
     },
     {
-        img: "https://yt3.googleusercontent.com/EDtaNe9ABcWLgOWL0xVfRDLVX5lhNecPgoU-MiLZna87AKT1MiaGH02OMdsedtlcbOZ6Neif=s176-c-k-c0x00ffffff-no-rj",
-        autor: "SPOiler 스포일러",
-        channelId: "UCtm_QoN2SIxwCE-59shX7Qg",
-        channelAddress: "https://www.youtube.com/@SPOiler",
+        img: "https://yt3.googleusercontent.com/XMA0_Bc0Hwh1cZjPrlz8_8Dr8jL3QrEjVJd72RYqQ4Z92RWZ_FCEEJo9_vkPJL6O-Ot3anCv=s176-c-k-c0x00ffffff-no-rj",
+        autor: "박축공 Football Park",
+        channelId: "UCObpcVC0xLXzyJr1SlKrheA",
+        channelAddress: "https://www.youtube.com/@footballpark",
     },
     {
         img: "https://yt3.googleusercontent.com/ytc/APkrFKY2PR3ecw4lozUDHjTDBl8Iz_16h3q740B_tqdLfA=s176-c-k-c0x00ffffff-no-rj",

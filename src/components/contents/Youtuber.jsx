@@ -13,7 +13,7 @@ import { Autoplay } from 'swiper/modules';
 const youtuber = () => {
     return (
         <section id="youtuber">
-            <h2>😀축구 유튜버 모음</h2>
+            <h2>⚽축구 유튜버 모음⚽</h2>
             <div className="youtuber__inner">
                 <Swiper
                     slidesPerView={9}

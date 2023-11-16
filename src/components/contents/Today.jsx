@@ -5,7 +5,7 @@ import { todayText } from '../../data/today'
 const Today = () => {
     return (
         <section id='todayPage'>
-            <h2>오늘의 추천 픽!!</h2>
+            <h2>🏃‍♂️오늘의 추천 픽🏃‍♂️</h2>
 
             <div className="today__inner">
                 <div className="today__thubm"><img src={todayText[0].img} alt="" /></div>
