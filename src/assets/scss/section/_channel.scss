@@ -11,6 +11,15 @@
         position: relative;
         background-position: center center;
 
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
         .circle {
             width: 200px;
             height: 200px;
@@ -73,8 +82,36 @@
     }
 
 
-    .channel__more {}
+    .channel__more {
+        padding: 40px;
+        padding-top: 0;
+
+        button {
+            padding: 10px 15px;
+            /* 패딩 조정 */
+            background-color: var(--white);
+            /* 배경색 조정 */
+            color: #08c57a;
+            /* 텍스트 색상 조정 */
+            border: 2px solid var(--black);
+            /* 테두리 제거 */
+            border-radius: 5px;
+            /* 둥근 테두리 */
+            cursor: pointer;
+            /* 커서 모양 변경 */
+            font-size: 16px;
+            /* 폰트 크기 조정 */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #08c57a;
+            color: var(--white);
+        }
+    }
 }
+
 
 #channelPage {
     .video__info {

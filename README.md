@@ -47,3 +47,29 @@
 ### api.js
 
 - 매 페이지마자 youtube api를 가져오는 코드를 작성하는 건 상당히 비효율적인 일이다. 
+
+### React Suspense
+- Suspense라는 React의 신기술을 사용하면 컴포넌트의 랜더링을 어떤 작업이 끝날 때까지 잠시 중단시키고 다른 컴포넌트를 먼저 랜더링할 수 있습니다.<br>
+이 작업이 꼭 어떠한 작업이 되어야 한다는 특별한 제약 사항은 없지만 아무래도 REST API나 GraphQL을 호출하여 네트워크를 통해 비동기로(asynchronously) 데이터를 가져오는 작업을 가장 먼저 떠오르게 됩니다.
+<Suspense fallback={<Spinner />}>
+  <UserList />
+</Suspense>
+- https://www.daleseo.com/react-suspense/
+
+### React lazy
+-React.lazy() 함수는 코드 분할(Code Splitting)을 구현하기 위한 기능 중 하나입니다. 코드 분할은 애플리케이션의 번들을 작은 조각으로 나누어, 사용자가 실제로 필요할 때 비동기적으로 로드되도록 하는 기술입니다. 이를 통해 초기 로딩 시간을 줄이고 효율적으로 자원을 관리할 수 있습니다.<br>
+React.lazy() 함수를 사용하여 동적으로 모듈을 로드할 수 있습니다. 주로 React의 Suspense 컴포넌트와 함께 사용됩니다. 예를 들어, 다음과 같이 사용될 수 있습니다:<br>
+
+import React, { lazy, Suspense } from 'react';
+
+const MyComponent = lazy(() => import('./MyComponent'));
+
+function App() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <MyComponent />
+      </Suspense>
+    </div>
+  );
+}

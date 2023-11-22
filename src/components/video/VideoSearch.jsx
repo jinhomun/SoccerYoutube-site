@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -9,11 +9,11 @@ const formatDate = (dateString) => {
     return `${year}-${month}-${day}`;
 }
 
-const VideoSearch = ({ videos, layout = "" }) => {
+const VideoSearch = ({ videos, layout = '' }) => {
     return (
         <>
             {videos.map((video, key) => (
-                <div key={key} className={`video${layout}`}>
+                <div key={key} className={`video ${layout}`}>
                     <div className="video__thumb play__icon">
                         <Link
                             to={`/video/${video.id.videoId}`}
@@ -34,9 +34,9 @@ const VideoSearch = ({ videos, layout = "" }) => {
                         </div>
                     </div>
                 </div>
-            ))
-            }
+            ))}
         </>
+
     )
 }
 

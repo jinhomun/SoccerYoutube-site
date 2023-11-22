@@ -4,9 +4,10 @@
     top: 0;
     width: 260px;
     height: 100%;
-    z-index: 1000;
+    z-index: 10000;
     background-color: var(--green);
     border-right: 3px solid var(--white);
+
 }
 
 #main {
@@ -19,7 +20,7 @@
 
 #footer {
     text-align: center;
-    border-top: 2px solid var(--white);
+    border-top: 1px solid var(--white);
     padding: 10px 10px 10px 10px;
     margin-left: 260px;
     width: calc(100% - 260px);
@@ -39,11 +40,26 @@
 
 
 @media (max-width: 800px) {
+    #root {
+        padding-top: 84px;
+    }
+
     #header {
-        left: -250px;
+        left: -260px;
+    }
+
+    #header.show {
+        left: 0;
+        background-color: var(--white);
+        top: 85px;
     }
 
     #main {
         padding-left: 0;
+    }
+
+    #footer {
+        width: 100%;
+        margin-left: 0;
     }
 }

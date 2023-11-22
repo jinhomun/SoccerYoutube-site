@@ -41,7 +41,7 @@
             justify-content: space-between;
 
             .youtuber {
-                width: 24%;
+                width: 23%;
                 margin-right: 0;
 
                 .youtuber__img {
@@ -55,7 +55,7 @@
 
     @media (max-width:600px) {
         .youtuber__inner {
-            .traveler {
+            .youtuber {
                 width: 31%;
             }
         }
@@ -64,7 +64,7 @@
 
     @media (max-width:400px) {
         .youtuber__inner {
-            .traveler {
+            .youtuber {
                 width: 48%;
             }
         }

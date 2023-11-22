@@ -4,9 +4,23 @@
     justify-content: space-between;
     min-height: 100vh;
 
+    @media (max-width: 1400px) {
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 49%);
+        gap: 10px;
+    }
+
+    @media (max-width: 400px) {
+        grid-template-columns: repeat(1, 100%);
+    }
+
     .video {
-        margin-bottom: 50px;
-        border: 1px solid #fff;
+        margin-bottom: 6%;
+        border: 1px solid var(--white100);
         padding: 16px;
 
         .video__thumb {
@@ -27,32 +41,55 @@
                 margin-top: 10px;
                 margin-bottom: 5px;
                 @include line-one;
-                color: #000;
             }
 
             .desc {
                 width: 100%;
                 @include line(3);
-                color: #fff;
+                color: var(--black300);
                 margin-bottom: 10px;
+                display: none;
             }
-
 
             .info {
                 display: flex;
                 justify-content: space-between;
-                color: #000;
-                font-size: 14px;
-                text-decoration: underline;
-                text-underline-position: under;
-                font-weight: 600;
-            }
+                color: var(--black100);
 
+                .author {
+                    @include line-one;
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-underline-position: under;
+
+                    &:hover {
+                        color: var(--white);
+                    }
+                }
+
+                .date {
+                    white-space: nowrap;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &.channel {
+            .video__info {
+                .info {
+                    display: none;
+                }
+
+                .desc {
+                    -webkit-line-clamp: 2;
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
 
-// 비이오 상세 페이지
+// 비디오 상세 페이지
 .video__view {
 
     .video__play {
@@ -70,6 +107,10 @@
             border-bottom: 1px solid var(--black600);
             padding-bottom: 15px;
 
+            @media (max-width: 800px) {
+                font-size: 24px;
+            }
+
         }
 
         .video__channel {
@@ -78,14 +119,23 @@
             margin-bottom: 40px;
             margin-top: 40px;
 
-            .id {
+            @media (max-width: 800px) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                flex-direction: column;
+            }
 
+            .id {
 
                 a {
                     border: 2px solid var(--black);
                     padding: 7px 20px;
                     border-radius: 30px;
-                    background-color: #000;
+                    display: inline-block;
+
+                    @media (max-width: 800px) {
+                        margin-bottom: 10px;
+                    }
                 }
             }
 
@@ -94,8 +144,10 @@
                     padding: 7px 20px;
                     border-radius: 30px;
                     margin-left: 5px;
-                    background-color: var(--black);
+                    background-color: var(--black100);
                     color: var(--white);
+                    display: inline-block;
+
 
                     svg {
                         color: var(--white);
@@ -114,21 +166,75 @@
         white-space: pre-line;
         padding-top: 40px;
     }
+}
 
-    .video__comments {
-        border: 2px solid rgba(255, 255, 255, 0.5);
+.video__more {
+    border: 1px solid var(--black600);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
 
-        .comment {
+    &:hover {
+        background-color: var(--black600);
+    }
+}
 
-            p {
+.video__more button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+// video__slider
+.video__slider {
+    .video {
+        .video__thumb {
+
+            a {
                 display: block;
-                padding: 5px 10px;
-                border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
-                margin: 5px 0;
+                cursor: pointer;
+                width: 100%;
+                padding-bottom: 56.25%;
+                background-size: cover;
+                background-position: center;
             }
         }
+
+        .video__info {
+            padding: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.694);
+
+            .title {
+                @include line-one;
+                font-size: 16px;
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                font-weight: bold;
+                color: var(--black);
+                font-weight: bold;
+
+                .author {
+                    @include line-one;
+                    font-size: 14px;
+                    text-decoration: underline;
+                    text-underline-position: under;
+
+                    &:hover {
+                        color: var(--white);
+                    }
+                }
+
+                .date {
+                    white-space: nowrap;
+                    font-size: 14px;
+                }
+            }
+        }
+
     }
-
-
-
 }
