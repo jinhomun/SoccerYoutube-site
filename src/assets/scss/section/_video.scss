@@ -169,20 +169,32 @@
 }
 
 .video__more {
-    border: 1px solid var(--black600);
-    text-align: center;
-    padding: 1rem;
-    border-radius: 50px;
-    cursor: pointer;
+    padding: 40px;
+    padding-top: 0;
 
-    &:hover {
-        background-color: var(--black600);
+    button {
+        padding: 10px 15px;
+        /* 패딩 조정 */
+        background-color: var(--white);
+        /* 배경색 조정 */
+        color: #08c57a;
+        /* 텍스트 색상 조정 */
+        border: 2px solid var(--black);
+        /* 테두리 제거 */
+        border-radius: 5px;
+        /* 둥근 테두리 */
+        cursor: pointer;
+        /* 커서 모양 변경 */
+        font-size: 16px;
+        /* 폰트 크기 조정 */
+        width: 100%;
+        margin-bottom: 10px;
     }
-}
 
-.video__more button {
-    background-color: transparent;
-    cursor: pointer;
+    button:hover {
+        background-color: #08c57a;
+        color: var(--white);
+    }
 }
 
 
