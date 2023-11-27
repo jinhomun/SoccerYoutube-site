@@ -1,6 +1,7 @@
 # 나만의 축구 유튜브 사이트 만들기
 - 유튜브 API를 이용해 축구정보를 볼수 있는 사이트를 만들어본다.
 평소 축구소식에 대해서 많이 찾아보기때문에 이러한 사이트를 만들어보았다.
+![youtube-project2](https://github.com/jinhomun/youtube-project/assets/144635699/fd8e230e-c7bf-4447-bc47-7cbdacef767e)
 
 
 ## 설치
@@ -75,4 +76,4 @@ function App() {
 }
 ```
 
-![youtube-project2](https://github.com/jinhomun/youtube-project/assets/144635699/fd8e230e-c7bf-4447-bc47-7cbdacef767e)
+
