@@ -77,8 +77,8 @@ export const keywordText = [
         src: "/search/Tottenham Hotspur"
     },
     {
-        title: "tvN SPORTS",
-        src: "/search/tvN SPORTS"
+        title: "오늘의 K리그",
+        src: "/search/오늘의 K리그"
     },
     {
         title: "불양TV",
