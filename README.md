@@ -1,7 +1,7 @@
 # 나만의 축구 유튜브 사이트 만들기
-- 유튜브 API를 이용해 축구정보를 볼수 있는 사이트를 만들어본다.
-평소 축구소식에 대해서 많이 찾아보기때문에 이러한 사이트를 만들어보았다.
 ![youtube-project2](https://github.com/jinhomun/youtube-project/assets/144635699/fd8e230e-c7bf-4447-bc47-7cbdacef767e)
+
+평소 축구소식에 대해서 많이 찾아보기때문에  유튜브 API를 이용해 축구소식를 볼수 있는 축구 관련 유튜브를 모아둔 축구 유튜브 사이트 입니다.
 
 
 ## 설치
@@ -19,24 +19,24 @@
 - `swiper`: 모바일 및 데스크톱에서 동작하는 터치 슬라이드 라이브러리로, 이미지 갤러리, 배너 및 콘텐츠 슬라이드 쇼 등을 만들 수 있다.
 
 ### .env 파일
-- 유튜브 API 키는 노출되면 안 되기 때문에 .환경변수로 저장해둔다.
+ 유튜브 API 키는 노출되면 안 되기 때문에 .환경변수로 저장해둔다.
 
 ### useParams
 
-- useParams는 React Router 라이브러리에서 제공되는 훅 중 하나로, 라우트 매개변수(route parameters)를 가져오기 위해 사용한다. 라우트 매개변수는 동적으로 변하는 부분적인 URL 세그먼트를 나타내며, 주로 경로의 일부를 동적으로 처리해야 할 때 쓴다.
+useParams는 React Router 라이브러리에서 제공되는 훅 중 하나로, 라우트 매개변수(route parameters)를 가져오기 위해 사용한다. 라우트 매개변수는 동적으로 변하는 부분적인 URL 세그먼트를 나타내며, 주로 경로의 일부를 동적으로 처리해야 할 때 쓴다.
 
--  useParams를 사용하는 경우는 아래와 같다.
+ useParams를 사용하는 경우는 아래와 같다.
 1) 동적인 URL을 가진 라우트
 2) 라우트의 ID나 식별자 처리
 
 ### useState 
 
-- const { videos, setVideos } = useState([]);
-- 돔 구조를 가지기 때문에 이런 형태를 사용한다.
+ const { videos, setVideos } = useState([]);
+돔 구조를 가지기 때문에 이런 형태를 사용한다.
 
 ### postman
 
-- Postman은 API 개발을 보다 쉽게 만들어주는 협업 도구 및 개발 환경. Postman은 다양한 API 테스트 및 개발 작업을 지원하며, 주로 다음과 같은 기능을 제공한다.
+ Postman은 API 개발을 보다 쉽게 만들어주는 협업 도구 및 개발 환경. Postman은 다양한 API 테스트 및 개발 작업을 지원하며, 주로 다음과 같은 기능을 제공한다.
 
 1) API 테스트
 2) API 개발 및 디자인
@@ -47,7 +47,28 @@
 
 ### api.js
 
-- 매 페이지마자 youtube api를 가져오는 코드를 작성하는 건 상당히 비효율적인 일이다. 
+매 페이지마다 youtube api를 가져오는 코드를 작성하는 건 상당히 비효율적인 일이다. 
+```js
+import axios from "axios";
+
+export const BASE_URL = 'https://youtube-v31.p.rapidapi.com'
+
+const options = {
+    params: {
+        maxResults: '48',
+    },
+    headers: {
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    }
+};
+
+export const fetchFromAPI = async (url) => {
+    const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+    return data;
+}
+
+```
 
 ### React Suspense
 - Suspense라는 React의 신기술을 사용하면 컴포넌트의 랜더링을 어떤 작업이 끝날 때까지 잠시 중단시키고 다른 컴포넌트를 먼저 랜더링할 수 있습니다.<br>
